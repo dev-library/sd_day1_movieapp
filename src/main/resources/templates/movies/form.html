@@ -1,0 +1,7 @@
+<form th:action="@{/movies}" th:object="${movie}" method="post">
+    <label>Title: <input type="text" th:field="*{title}"/></label><br/>
+    <label>Director: <input type="text" th:field="*{director}"/></label><br/>
+    <label>Release Date: <input type="date" th:field="*{releaseDate}"/></label><br/>
+    <button type="submit">Save</button>
+</form>
+<a th:href="@{/movies}">Back to List</a>

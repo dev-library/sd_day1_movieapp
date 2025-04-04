@@ -1,0 +1,12 @@
+<h1>Movie List</h1>
+<a th:href="@{/movies/new}">+ Add Movie</a>
+<table>
+    <tr><th>Title</th><th>Director</th><th>Release Date</th></tr>
+    <tr th:each="movie : ${movies}">
+        <td>
+            <a th:href="@{'/movies/' + ${movie.id}}" th:text="${movie.title}"></a>
+        </td>
+        <td th:text="${movie.director}"></td>
+        <td th:text="${movie.releaseDate}"></td>
+    </tr>
+</table>
